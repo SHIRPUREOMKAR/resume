@@ -1,0 +1,274 @@
+\documentclass[10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage[a4paper,bottom=6.4mm,left=14.11mm,right=14.11mm,top=52.74mm]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage[table, svgnames]{xcolor}
+\usepackage{hyphenat}
+\usepackage{romannum}
+\usepackage{anyfontsize}
+% \usepackage[empty]{fullpage}
+% \usepackage[usenames,dvipsnames]{color}
+\usepackage[pdftex]{hyperref}
+\usepackage{fontawesome}
+\usepackage[misc]{ifsym}
+\usepackage{array}
+\usepackage{hyperref}
+
+\setlength{\parindent}{0pt}
+\hyphenpenalty 10000
+\def\Plus{\texttt{\texttt{+}}}
+%%%%%%% Command for Thick hline %%%%%%%%%%
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 0.7pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 0.7pt\hskip\tabcolsep}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Command Section Headers %%%%%%%%%%
+\newcommand{\xfill}[2][1ex]{
+	\dimen0=#2\advance\dimen0 by #1
+	\leaders\hrule height \dimen0 depth -#1\hfill
+}
+\renewcommand{\section}[1]{
+	\vspace{5pt}
+	{\color{Blue}{\Large\scshape\raggedright #1\xfill[0pt]{0.5pt}}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Command Subsection Headers %%%%%%%
+\renewcommand{\subsection}[4]{
+	\def\temp{#4}
+	\vspace{2pt}
+	{
+		\large
+		{\textbf{#1}} | {\sl #2} \filldate{#3}
+		\ifx\temp\empty
+		\else
+		{
+			\\[0.1em]
+			\fontsize{11}{13.2}\selectfont
+			\sl #4
+		}
+		\fi
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% Date Formatting %%%%%%%%%%%%%%%%
+\newcommand{\filldate}[1]{\strut\hfill {\small \textit{(#1)}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Set itemize formatting %%%%%%%%%%%
+\renewcommand\labelitemi{\small$\bullet$}
+\setlist[itemize]{itemsep=-0.5mm, topsep=2pt, leftmargin=15pt, after=\vspace{1pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Edit if you want long header %%%%%%%
+% Long Header
+\newif\iflong
+\longtrue
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iflong
+	\addtolength{\topmargin}{9.54mm}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				 First Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%% Minors & Honors %%%%%%%%%%%%%%%%
+Pursuing a \textbf{Minor} in the \textbf{Entrepreneurship} at \textbf{Desai Sethi School of Entrepreneurship, IIT Bombay}
+%%%%%%%%% Scholastic %%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5em}
+\section{Scholastic Achievements}
+\vspace{2pt}
+\begin{itemize}
+    	%merge these two points
+    \item Recipient of the \textbf{\textit{Kishore Vaigyanik Protsahan Yojana Exam (KVPY)}} fellowship in \textbf{SX} division
+    \filldate{2021}
+    \item Recipient of the \textit{\textbf{National Talent Search Examination (NTSE)}} Scholarship awarded by the \textbf{NCERT}
+    \filldate{2020}
+    \item Scored a percentile of \textbf{98.93} in \textbf{JEE Main} examination among \textbf{10,00,000\Plus} aspirants all across India
+    \filldate{2022}
+    \item Scored a percentile of \textbf{96.87} in \textbf{JEE Advanced} examination among \textbf{1,50,000\Plus} aspirants all across India
+    \filldate{2022}
+    \item Achieved \textbf{Silver} Medal in \textbf{Dr.} \textbf{H. Bhabha Balvaidnyanik} Exam, surpassing \textbf{80,000\Plus} aspirants statewide
+    \filldate{2019}
+    
+\end{itemize}
+
+%%%%%%%%%% Course Projects %%%%%%%%%%%%%%%
+\section{Key Projects And Experience}
+\vspace{5px}
+
+\subsection{NN-based Natural Language Processing Model}{Learners' Space, 2023}{Summer '23}{Web and Coding Club}\filldate{IIT Bombay}
+\begin{itemize}
+	% \item Designed a \textbf{Neural Network} model, utilizing \textbf{PyTorch} for \textbf{Machine Learning} in \textbf{Binary classification} tasks
+	\item Applied \textbf{Skip-Gram model}, word-embedding in NLP using PyTorch and developed NN for \textbf{Sentiment Analysis}
+        \item Implemented \textbf{optimisers} in \textbf{sequential} NN model for \textbf{Binary Classification} tasks leading in better test results
+	\item Fine-tuned a pre-trained model to perform as a \textbf{Movie QnA }model which involved training on \textbf{bespoke} \textbf{self-curated data-set} specifically for movie domain and created an app in \textbf{Gradio} for easy and simplified interaction
+ 
+\end{itemize}
+ 
+\subsection{Mess-I : Mess Digitalization}{Application Development Project}{May '23 - Present}{\textit{Institute Developers' Community}}\filldate{IIT Bombay}
+\begin{itemize}
+        \item Maintaining a platform of digitalized mess management in \textbf{10\Plus} hostels serving \textbf{10,000\Plus} people on the daily basis
+	\item Developed a \textbf{Flutter}-based\textbf{ remote configuration} system for Mess-i Tablets which facilitates \textbf{remote debugging} of issue, also implemented an \textbf{`Extras'} feature to current dashboard streamlining access to additional meal options
+ 
+\end{itemize}
+\subsection{InstiApp : Buy and Sell}{Application Development Project}{Mar '23 - May '23}{\textit{Institute Developers' Community}}\filldate{IIT Bombay}
+\begin{itemize}
+        \item Worked on \textbf{InstiApp} - with over \textbf{10,000\Plus} downloads and \textbf{2,500\Plus} MAUs meeting the info-social needs of campus\vspace{1pt}
+	\item Created a user-friendly front-end interface allowing users to put their goods online on \textbf{Buy and Sell Portal} on InstiApp, \textbf{currently functioning }\textbf{feature} facilitating the campus residents in buying and selling their goods online
+
+\end{itemize}
+
+\subsection{Image Processing \& Object Detection Model}{Summer of Code}{Summer '23}{Web and Coding Club}\filldate{IIT Bombay}
+\begin{itemize}
+	\item \textbf{Metal Porosity Calculator} - Developed a sophisticated model using \textbf{OpenCV} to analyse highly magnified metal surface images utilizing methods as \textbf{thresholding}  and \textbf{contour-placements}, with huge real-world \textbf{applicability}
+        \item Developed a \textbf{live}, highly\textbf{ configurable} settings system enabling parameter adjustments for more accurate results
+	\item \textbf{Money Counter} - Developed \textbf{contour-based} object detection model utilising \textbf{Canny} edge-detection \& data-filters
+ 
+\end{itemize}
+
+\subsection{Computer Architecture Projects}{Course Project : CS-232 - DLDCA Lab}{Autumn '23}{\textit{Instructor: Prof. Biswabandan Panda}}\filldate{IIT Bombay}
+\begin{itemize}
+	\item \textbf{Binary Music Encoder} - Engineered a \textbf{VHDL }based\textbf{ sequential encoder} to precisely identify and convert binary value of notes into \textbf{synchronized byte output}, representing the chords their respective collection of notes
+ 	\item \textbf{MIPS Programming} - Incorporated different algorithms in \textbf{MIPS} for a \textbf{query handling} program that sorts the inputs utilising \textbf{Heap Sort} algorithm and searches efficiently through \textbf{Binary Search} algorithm in the sorted data 
+  
+\end{itemize}
+
+\subsection{Logs analysis - ELK Stack}{Stack Development Project}{Aug '23 - Present}{\textit{Institute Developers' Community}}\filldate{IIT Bombay}
+\begin{itemize}
+        \item Studying about the setup and implementation of\textbf{ ELK Stack} to analyse different kinds of system and server logs
+	\item  Establish an ELK cluster with \textbf{scalability} in mind, taking into account \textbf{data replication strategies} and a \textbf{distributed node configuration} to optimise log analysis and enhance stats for both existing and incoming logs
+        \item Automating alerts within the Stack to ensure \textbf{quick response} to \textbf{critical system events}, minimizing downtime
+ \end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{bottom=6.4mm,left=14.11mm,right=14.11mm,top=16mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 				Second Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \vspace{2px}
+    
+\subsection{File Compression System}{Course Project: CS 293 - Data Structures \& Algorithm}{Autumn '23}{\textit{Instructor: Prof. Ashutosh Gupta}}\filldate{IIT Bombay}
+\begin{itemize}
+        \item Modified the \textbf{Run-Length Encoding (RLE)} for binary strings, along with \textbf{gamma-bit encoding} for efficiency
+	\item Implemented \textbf{Huffman encoding} for ASCII-character strings through Huffman tree construction along with an \textbf{Lempel-Ziv-1977 }encoding solution to replace repetitive sub-strings by \textbf{back-referencing} to optimise encoding
+ 
+\end{itemize}
+
+\subsection{Data Analysis Projects}{Course Project : CS 215 - Data Analysis and Interpretation}{Spring '23}{\textit{Instructor: Prof. Ajit V. Rajwade}}\filldate{IIT Bombay}
+\begin{itemize}
+ 	\item \textbf{MRI Scans Analysis} - Analysed MRI scan images to calculate the \textbf{correlation co-efficient}, Quadratic Mutual Information \textbf{(QMI)} to measure dependence and repeated the same for negatives to compare the quantitative results
+ 	\item \textbf{Kernel Density Estimation} - Utilized \textbf{MATLAB} to perform cross-validation on a data-set, by evaluating \textbf{likelihood, discrepancy} for values of \textbf{Standard Deviation}(\textbf{$\sigma$}), determining the best parameter for PDF estimation
+  
+\end{itemize}
+\section{Other Projects}
+
+
+
+\subsection{Web Crawler}{Course Project : CS 104 - Software Systems Lab}{Spring '23}{\textit{Instructor: Prof. Kameswari Chebrolu}}\filldate{IIT Bombay}
+\begin{itemize}
+	\item Developed a \textbf{Python-based} web-scraper that extracts data recursively, with command-line arguments for \textbf{target URLs} and \textbf{recursion depth} and feature that facilitates the searching for specific\textbf{ keywords, file-types} in URLs
+        \item Added \textbf{file-type classification} and an interactive HTML-based \textbf{flow chart visualization} of explored data, files
+\end{itemize}
+
+
+
+\subsection{Mountain Cargo Bot}{Course Project : MS 101 - MakerSpace}{Spring '23}{\textit{Instructor: Prof. P. C. Pandey}}\filldate{IIT Bombay}
+\begin{itemize}
+	\item Developed a versatile \textbf{Line Following bot}, adept at autonomously handling steep slopes, precise payload delivery
+        \item Utilized \textbf{Arduino IDE} to program the bot along with \textbf{Fusion360}, \textbf{LaserCAD} and \textbf{Fractory} to precisely design 3D mechanical components and making use of \textbf{laser-cutting} and \textbf{3D-printing} for accurate production of the parts
+        
+\end{itemize}
+
+\subsection{Algorithm-Based Projects}{Self-Project}{Autumn '23}{}
+\begin{itemize}
+	\item Utilised \textbf{Genetic Algorithm} to efficiently \textbf{compute roots} of \textbf{intricate equations} with user specified accuracy
+	\item Applied \textbf{Minimax} algorithm in C for single-player mode in \textbf{Tic-Tac-Toe}, also an option for a two-player mode
+
+\end{itemize}
+
+\subsection{Wordle-Solver}{Self-Project}{Autumn '23}{}
+\begin{itemize}
+	\item Wordle-Game : Created the wordle game in \textbf{Python} from scratch considering all the rules and valid word-sets
+	\item Developed wordle-solver incorporating \textbf{minimising average} obtaining best avg of \textbf{3.42} guesses for random cases
+
+\end{itemize}
+
+
+% \subsection{XLR8 Bot}{Workshop Project - Electronics and Robotics Club, IIT Bombay}{Autumn '22}{}
+% \begin{itemize}
+% 	\item Designed and constructed a \textbf{wireless} robotic car utilizing \textbf{Arduino} programming, \textbf{BLE} and \textbf{ESP-NOW} protocols aimed at successfully navigating and clearing through given obstacle course in the \textbf{shortest possible time}
+% \end{itemize}
+
+% \subsection{Tic-Tac-Toe using MiniMax}{Self-Project}{Autumn '22}{}
+% \begin{itemize}
+
+% \end{itemize}
+
+
+\section{Positions Of Responsibilities}
+\vspace{2pt}
+
+\subsection{Core Member}{Developers' Community, IIT Bombay}{Jan '23 - Present}{Part of \textbf{25+} member team, responsible for design, development and maintenance of projects for institute}
+\begin{itemize}
+	\item Developed new features like \textbf{Buy and Sell Portal} currently \textbf{active} and proved to be immensely successful with over \textbf{120\Plus} product posts for sale since it's launch, *\textbf{General Championship Leader board} to the InstiApp 
+	\item Incorporated \textbf{remote configuration feature} in existing Mess-i application that facilitating remote \textbf{debugging}
+
+\end{itemize}
+
+
+\vspace{-2pt}
+%%%%%%%%%Courses undertaken%%%%%%%%%
+\section{Key Courses Undertaken}
+\vspace{2pt}
+
+\begin{tabular}{p{4cm} p{13.5cm}}
+	\vspace{-3pt}\textbf{Computer Science} & \vspace{-5pt}*Data Structures and Algorithms$^\dagger$, **Design and Analysis of Algorithms, *Discrete Structures, *Data Analysis and Interpretation, Software Systems Lab, **Computer Networks$^\dagger$, *Digital Logic Design and Computer Architecture$^\dagger$, **Operating Systems$^\dagger$, **Logic and TOC, **AI and ML$^\dagger$, Computer Programming and Utilization\\
+        \vspace{-3pt}\textbf{Mathematics \& others} & \vspace{-5pt}Calculus, Linear Algebra, Differential Equations, *Introduction to Entrepreneurship, Quantum \& Classical Physics, Physical Chemistry, Organic and Inorganic Chemistry, Biology, Makerspace, *Economics
+\end{tabular}
+\vspace{0pt}
+\hspace*{0mm}{\sl $\dagger${\it Course has corresponding lab}}
+\hspace*{18mm}{\sl *{\it to be completed by Autumn '23}}
+\hspace*{18mm}{\sl **{\it to be completed by Spring '24}}
+
+\vspace{2pt}
+%%%%%%%%% Technical Skills %%%%%%%%%
+\section{Technical Skills}
+
+\vspace{3pt}
+\begin{tabularx}{\textwidth}{ p{4cm}  m{13.5cm} }
+	\textbf{Languages} \vspace{3pt} & \vspace{2pt}C/C\Plus\Plus, Python, Bash, x86 and MIPS Assembly, VHDL, DART\\ 
+	\textbf{Software}\vspace{3pt} & Git, \LaTeX, Markdown, MATLAB, Sed, Awk, GDB, Docker\\
+	\textbf{Data Science Libs}\vspace{3pt} & NumPy, Pandas, MatPlotLib, SciPy, spaCy, PyTorch, TensorFlow \\
+	\textbf{Development}\vspace{3pt} & CSS, Bootstrap, HTML, Javascript, Angular, Flutter, Django, TypeScript \\
+ 
+\end{tabularx}
+\vspace{-5pt}
+
+%%%%%%%%% Extracurrics %%%%%%%%%%%%%
+\section{Extracurricular Activities}
+
+\begin{itemize}
+    \item Achieved \textbf{A} grade in \textbf{both Elementary} and \textbf{Intermediate State Drawing }\&\textbf{ Sketching} Examinations\filldate{'18,'19}
+    \item Curated intuitive, activity-based questionnaires impacting over \textbf{20\Plus} students under \textit{National Service Scheme}\filldate{'23}
+    \item Assisted in Marketing Division of \textbf{E-Summit}, Flagship event of\textbf{ Entrepreneurship-Cell, IIT Bombay}\filldate{'23}
+    
+\end{itemize}
+
+\end{document}

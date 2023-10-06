@@ -1,0 +1,38 @@
+***MINOR IN ENTREPRENEURSHIP
+
+***SCHOLASTIC ACHIEVEMENTS
+- KVPY
+- NTSE
+- HBBVP*
+
+***KEY PROJECTS
+-> Dev-Com
+--- Buy n Sell
+--- Mess-i
+x--- GC Leaderboard
+-> web-crawler
+-> SoC
+-> LS
+
+
+-> CS232
+-> wordle-solver
+-> tic-tac-toe
+-> makerspace
+x-> xlr8
+
+***PoR
+x- E-Cell
+x- TechFest
+
+***Tech-Skills
+- C++, python, flutter, django, Angular, vhdl, sed, awk, bash, make, git
+
+
+
+Computer Science
+†Data Structures and Algorithms*, Discrete Structures*, Data Analysis and Interpretation*, †Digital Logic Design and Computer Architecture*, †Operating Systems**, Logic and TOC**, Design Analysis and algorithms**, †AI/ML*, Computer Programming and Utilization, Software Systems Lab
+Mathematics Others
+Calculus, Linear Algebra, Differential Equations, Optimisation*
+Quantum & Classical Physics, Physical Chemistry, Organic and Inorganic Chemistry, Biology, Entrepreneurship, Makerspace, Economics*
+†Course has corresponding lab *to be completed by November’23

@@ -1,0 +1,176 @@
+\documentclass[10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage[a4paper,bottom=6.4mm,left=14.11mm,right=14.11mm,top=53.06mm]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage[table, svgnames]{xcolor}
+\usepackage{hyphenat}
+\usepackage{romannum}
+\usepackage{anyfontsize}
+% \usepackage[empty]{fullpage}
+% \usepackage[usenames,dvipsnames]{color}
+\usepackage[pdftex]{hyperref}
+\usepackage{fontawesome}
+\usepackage[misc]{ifsym}
+\usepackage{array}
+
+\setlength{\parindent}{0pt}
+\hyphenpenalty 10000
+\def\Plus{\texttt{\texttt{+}}}
+%%%%%%% Command for Thick hline %%%%%%%%%%
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 0.7pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 0.7pt\hskip\tabcolsep}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Command Section Headers %%%%%%%%%%
+\newcommand{\xfill}[2][1ex]{
+	\dimen0=#2\advance\dimen0 by #1
+	\leaders\hrule height \dimen0 depth -#1\hfill
+}
+\renewcommand{\section}[1]{
+	\vspace{5pt}
+	{\color{Blue}{\Large\scshape\raggedright #1\xfill[0pt]{0.5pt}}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Command Subsection Headers %%%%%%%
+\renewcommand{\subsection}[4]{
+	\def\temp{#4}
+	\vspace{2pt}
+	{
+		\large
+		{\color{Green} \textbf{#1}} | {\sl #2} \filldate{#3}
+		\ifx\temp\empty
+		\else
+		{
+			\\[0.1em]
+			\fontsize{11}{13.2}\selectfont
+			\sl #4
+		}
+		\fi
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% Date Formatting %%%%%%%%%%%%%%%%
+\newcommand{\filldate}[1]{\strut\hfill {\small \textit{(#1)}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Set itemize formatting %%%%%%%%%%%
+\renewcommand\labelitemi{\small$\bullet$}
+\setlist[itemize]{itemsep=-0.5mm, topsep=2pt, leftmargin=15pt, after=\vspace{1pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Edit if you want long header %%%%%%%
+% Long Header
+\newif\iflong
+\longtrue
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \iflong
+% 	\addtolength{\topmargin}{9.54mm}
+% \fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				 First Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%% Minors & Honors %%%%%%%%%%%%%%%%
+Pursuing a \textbf{Minor} in the \textbf{Entrepreneurship} at \textbf{Desai Sethi School of Entrepreneurship, IIT Bombay}
+
+%%%%%%%%% Scholastic %%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5em}
+\section{Scholastic Achievements}
+\vspace{2pt}
+\begin{itemize}
+    \item Recipient of the \textbf{\textit{Kishore Vaigyanik Protsahan Yojana Exam (KVPY)}} fellowship in \textbf{SX} division
+    \filldate{2021}
+    \item Recipient of the \textit{\textbf{National Talent Search Examination (NTSE)}} Scholarship awarded by the \textbf{NCERT}
+    \filldate{2020}
+    \item Scored a percentile of \textbf{98.93} in \textbf{JEE Main} examination among \textbf{10,00,000\Plus} aspirants all across India
+    \filldate{2022}
+    \item Scored a percentile of \textbf{96.87} in \textbf{JEE Advanced} examination among \textbf{1,50,000\Plus} aspirants all across India
+    \filldate{2022}
+    \item Achieved \textbf{Silver} Medal in \textbf{Dr.} \textbf{H. Bhabha Balvaidnyanik} Exam, surpassing \textbf{80,000\Plus} aspirants statewide
+    \filldate{2019}
+
+\end{itemize}
+
+\section{Key Projects And Experience}
+\vspace{5px}
+
+\subsection{InstiApp : Buy and Sell}{App Development Project - Developers' Community}{Mar '23 - May '23}{}
+\begin{itemize}
+        \item Worked on \textbf{InstiApp} - with over \textbf{10,000\Plus} downloads and \textbf{2,500\Plus} MAUs meeting the info-social needs of campus\vspace{1pt}
+	\item Created a user-friendly front-end interface allowing users to put their goods online on \textbf{Buy and Sell Portal} on InstiApp, \textbf{currently functioning }\textbf{feature} facilitating the campus residents in buying and selling their goods online
+
+\end{itemize}
+
+\subsection{Mess Digitalization}{App Development Project - Developers' Community}{May '23 - Present}{}
+\begin{itemize}
+        \item Maintaining a platform of digitalized mess management in \textbf{10\Plus} hostels serving \textbf{10,000\Plus} people on the daily basis
+	\item Developed a \textbf{Flutter}-based\textbf{ remote configuration} system for Mess-i Tablets which facilitates \textbf{remote debugging} of issue, also implemented an \textbf{`Extras'} feature to current dashboard streamlining access to additional meal options
+ 
+\end{itemize}
+\subsection{Natural Language Processing Model}{Learners' Space - Web and Coding Club}{Summer '23}{}
+\begin{itemize}
+	% \item Designed a \textbf{Neural Network} model, utilizing \textbf{PyTorch} for \textbf{Machine Learning} in \textbf{Binary classification} tasks
+	\item Applied \textbf{Skip-Gram model}, word-embedding in NLP using PyTorch and developed NN for \textbf{Sentiment Analysis}
+        \item Implemented \textbf{optimisers} in \textbf{sequential} NN model for \textbf{Binary Classification} tasks leading in better test results
+	\item Fine-tuned a pre-trained model to perform as a \textbf{Movie QnA }model which involved training on \textbf{bespoke} \textbf{self-curated data-set} specifically for movie domain and created an app in \textbf{Gradio} for easy and simplified interaction
+ 
+\end{itemize}
+ 
+
+\subsection{Image Processing \& Object Detection}{Summer of Code - Web and Coding Club}{Summer '23}{}
+\begin{itemize}
+	\item \textbf{Metal Porosity Calculator} - Developed a sophisticated model using \textbf{OpenCV} to analyse highly magnified metal surface images utilizing methods as \textbf{thresholding}  and \textbf{contour-placements}, with huge real-world \textbf{applicability}
+        \item Developed a \textbf{live}, highly\textbf{ configurable} settings system enabling parameter adjustments for more accurate results
+	\item \textbf{Money Counter} - Developed \textbf{contour-based} object detection model utilising \textbf{Canny} edge-detection \& data-filters
+ 
+\end{itemize}
+\subsection{Computer Architecture Projects}{Course Project : CS-232 - DLDCA Lab}{Autumn '23}{\textit{Instructor: Prof. Biswabandan Panda}}\filldate{IIT Bombay}
+\begin{itemize}
+	\item \textbf{Binary Music Encoder} - Engineered a \textbf{VHDL }based\textbf{ sequential encoder} to precisely identify and convert binary value of notes into \textbf{synchronized byte output}, representing the chords their respective collection of notes
+ 	\item \textbf{MIPS Programming} - Incorporated different algorithms in \textbf{MIPS} for a \textbf{query handling} program that sorts the inputs utilising \textbf{Heap Sort} algorithm and searches efficiently through \textbf{Binary Search} algorithm in the sorted data 
+  
+\end{itemize}
+\subsection{Data Analysis Projects}{Course Project : CS 215 - Data Analysis and Interpretation}{Spring '23}{\textit{Instructor: Prof. Ajit V. Rajwade}}\filldate{IIT Bombay}
+\begin{itemize}
+ 	\item \textbf{MRI Scans Analysis} - Analysed MRI scan images to calculate the \textbf{correlation co-efficient}, Quadratic Mutual Information \textbf{(QMI)} to measure dependence and repeated the same for negatives to compare the quantitative results
+  
+\end{itemize}
+
+\section{Positions Of Responsibilities}
+\vspace{2pt}
+
+\subsection{Core Member}{Institute Developers' Community, IIT Bombay}{Jan '23 - Present}{Part of \textbf{25+} member team, responsible for design, development and maintenance of projects for institute}
+\begin{itemize}
+	\item Developed new features like \textbf{Buy and Sell Portal} currently \textbf{active} and proved to be immensely successful with over \textbf{120\Plus} product posts for sale since it's launch, *\textbf{General Championship Leader board} to the InstiApp 
+	\item Incorporated \textbf{remote configuration feature} in existing Mess-i application that facilitating remote \textbf{debugging}
+
+\end{itemize}
+
+\section{Technical Skills}
+\vspace{3pt}
+\begin{tabularx}{\textwidth}{ p{4cm}  m{13.5cm} }
+	\textbf{Languages} \vspace{3pt} & \vspace{2pt}C/C\Plus\Plus, Python, Bash, x86 and MIPS Assembly, VHDL, DART, Git\\ 
+	\textbf{Data Science Libs}\vspace{3pt} & PyTorch, TensorFlow, NumPy, Pandas, MatPlotLib, SciPy, spaCy \\
+	\textbf{Development}\vspace{3pt} & Flutter, Angular, Django, TypeScript, CSS, Bootstrap, HTML, Javascript \\
+ 
+\end{tabularx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{bottom=6.4mm,left=14.11mm,right=14.11mm,top=16mm}
+
+\end{document}
